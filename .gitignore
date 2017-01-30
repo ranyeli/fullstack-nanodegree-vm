@@ -55,3 +55,8 @@ fabric.properties
 # *.ipr
 
 # End of https://www.gitignore.io/api/pycharm
+/vagrant/webapp/TEST.py
+vagrant/webapp/database_setup.pyc
+vagrant/webapp/puppies.db
+vagrant/webapp/puppydb_setup.pyc
+
