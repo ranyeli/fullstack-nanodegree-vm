@@ -59,4 +59,5 @@ fabric.properties
 vagrant/webapp/database_setup.pyc
 vagrant/webapp/puppies.db
 vagrant/webapp/puppydb_setup.pyc
+*.pyc
 
