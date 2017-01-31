@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deleting</title>
+</head>
+<body>
+    <form enctype="multipart/form-data" action="" method="post" id="remove_rest">
+        <input hidden value="{id}" name="rest_id"/>
+    </form>
+    <script>
+        var del = window.confirm("Deleting {restaurant} ?");
+        if(del) document.querySelector("#remove_rest").submit();
+        if(!del) window.location.pathname = "/restaurants";
+    </script>
+</body>
+</html>
