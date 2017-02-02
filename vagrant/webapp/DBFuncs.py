@@ -1,6 +1,7 @@
-from sqlalchemy import func, create_engine
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from database_setup import Base, Restaurant, MenuItem
+
+from vagrant.webapp.database_setup import Base, Restaurant, MenuItem
 
 engine = create_engine('sqlite:///restaurantmenu.db')
 Base.metadata.bind = engine
@@ -28,6 +29,8 @@ def delete_restaurant(id):
     session.query(Restaurant).filter(Restaurant.id == id).delete()
     session.commit()
 
+def get_menu_items():
+    return session.query(MenuItem).order_by(MenuItem.id.asc()).all()
 
 #for r in get_all_restaurants():
 #    print r.name
@@ -37,4 +40,4 @@ def delete_restaurant(id):
 #import re
 #print re.search("hola(\d+)", "hola569").group(1)
 
-#delete_restaurant(6)
+#delete_restaurant(12)

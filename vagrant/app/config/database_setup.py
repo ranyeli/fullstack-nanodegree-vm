@@ -22,5 +22,15 @@ class MenuItem(Base):
 
     __tablename__ = 'menu_item'
 
+    @property
+    def serialize(self):
+        return {
+            'name': self.name,
+            'price': self.price,
+            'description': self.description,
+            'course': self.course,
+            'id': self.id
+        }
+
 engine = create_engine('sqlite:///restaurantmenu.db')
 Base.metadata.create_all(engine)

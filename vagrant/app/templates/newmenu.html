@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Menu</title>
+</head>
+<body>
+<style>
+    form *{ display: block; }
+</style>
+<h1>Adding new menu to {{rest.name}}</h1>
+    <form method="post" enctype="application/x-www-form-urlencoded" action="{{url_for('newMenuItem',restaurant_id=rest.id)}}">
+        <label for="name_id">Menu Name</label> <input type="text" id="name_id" name="menu_name">
+        <label for="price_id">Price</label> <input type="text" id="price_id" name="price">
+        <label for="desc_id">Description</label> <textarea id="desc_id" name="desc"></textarea>
+        <label for="course_id">Course</label>
+        <select id="course_id" name="course">
+            <option value="Entree">Entree</option>
+            <option value="Appetizer">Appetizer</option>
+            <option value="Dessert">Dessert</option>
+            <option value="Beverage">Beverage</option>
+        </select>
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>

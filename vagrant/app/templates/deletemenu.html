@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete menu</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete {{menu.name}} ?</h1>
+    <form enctype="application/x-www-form-urlencoded" method="post" action="{{url_for('deleteMenuItem', restaurant_id=menu.restaurant_id, menu_id = menu.id)}}">
+        <input type="submit" value="Delete">
+    </form>
+    <br>
+    <a href="{{url_for('getRestaurant',restaurant_id=menu.restaurant_id)}}">Cancel</a>
+</body>
+</html>
