@@ -1,0 +1,55 @@
+header, #container, footer{
+    margin: 10px 23% 0 23%;
+    width: 56%;
+}
+
+header{
+    background-color: darkslategray;
+    color: white;
+    padding-bottom: 3px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+body{
+    background-color: black;
+}
+
+#container{
+    margin-top: 1px;
+    background-color: white;
+}
+
+html, body, #container {
+    min-height: 90vh;
+}
+
+#title{
+    font-size: xx-large;
+    text-decoration: none;
+    position: relative;
+    left: 10px;
+}
+
+#title:visited, #title:active{
+    color: ghostwhite;
+}
+
+footer{
+    margin-top: 1px;
+    color: whitesmoke;
+    height: 60px;
+    background-color: slategray;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+}
+
+footer a, footer a:active, footer a:visited{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+#la{
+    height: 290px;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant app</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+    <header><a href="{{url_for('restaurantHome')}}" id="title">Robert's Restaurant App</a></header>
+    <div id="container">
+        {% block content %}
+        {% endblock %}
+        <div id="la"></div>
+    </div>
+    <footer>
+        <a href="#">Robert Lopez © {{date}}</a>
+    </footer>
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+</body>
+</html>
