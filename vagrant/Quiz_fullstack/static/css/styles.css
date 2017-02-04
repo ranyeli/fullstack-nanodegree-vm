@@ -1,4 +1,6 @@
-header, #container, footer{
+header,
+#container,
+footer{
     margin: 10px calc((100% - 743px)/2) 0 calc((100% - 743px)/2);
     width: 743px;
     position: relative;
@@ -33,7 +35,8 @@ html, body, #container {
     left: 10px;
 }
 
-#title:visited, #title:active{
+#title:visited,
+#title:active{
     color: ghostwhite;
 }
 
@@ -47,15 +50,19 @@ footer{
     text-align: center;
 }
 
-footer a, footer a:active, footer a:visited{
+footer a,
+footer a:active,
+footer a:visited{
     text-decoration: none;
     color: whitesmoke;
 }
-.edit img, .delete img{
+.edit img,
+.delete img{
     width: 17px;
     height: 17px;
 }
-.edit, .delete{
+.edit,
+.delete{
     position: relative;
     right: 0;
 }
@@ -78,7 +85,9 @@ h1{
     width: 100%;
 }
 
-#restaurants h1, #menu h1{
+#restaurants > h1,
+#menu > h1,
+#new_restaurant > h1{
     text-align: center;
     position: relative;
     top: 15px;
@@ -109,11 +118,13 @@ h1{
     height: 45px;
 }
 
-#rests_list tr > td, #menu_items tr > td{
+#rests_list tr > td,
+#menu_items tr > td{
     width: 80%;
 }
 
-#rests_list tr td:not(:first-child), #menu_items tr td:not(:first-child){
+#rests_list tr td:not(:first-child),
+#menu_items tr td:not(:first-child){
     width: 5.5%;
 }
 
@@ -134,3 +145,41 @@ h1{
 .m_label {
     font-weight: bold;
 }
+
+#new_restaurant form{
+    width: 75%;
+    margin-left: 13%;
+    margin-right: 11%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#new_restaurant form label{
+    font-size: xx-large;
+}
+
+#new_restaurant form #rest{
+    font-size: x-large;
+    width: 245px;
+}
+
+.inputs{
+    padding-top: 38px;
+    display: block;
+    text-align: center;
+    word-spacing: 35px;
+}
+
+.inputs input{
+    position: relative;
+    font-size: 28px;
+    border-radius: 15px;
+}
+
+/*.inputs input:first-child{*/
+    /*background-color: mediumpurple;*/
+/*}*/
+
+/*.inputs input:not(:first-child){*/
+    /*background-color: deeppink;*/
+/*}*/

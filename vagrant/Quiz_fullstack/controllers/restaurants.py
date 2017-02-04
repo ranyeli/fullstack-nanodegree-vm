@@ -10,7 +10,7 @@ def restaurantHome():
 
 @app.route('/restaurants/new')
 def newRestaurant():
-    return 'Add restaurant'
+    return render_template('newRestaurant.html')
 
 
 @app.route('/restaurant/<int:restaurant_id>/edit')
