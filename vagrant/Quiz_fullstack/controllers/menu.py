@@ -14,7 +14,7 @@ def newMenu(restaurant_id):
 
 @app.route('/restaurant/<int:restaurant_id>/menuitem/<int:item_id>/edit')
 def editMenu(restaurant_id, item_id):
-    return 'Editing menu item {id} for rest {id2}'.format(id=item_id, id2=restaurant_id)
+    return render_template('editMenu.html')
 
 
 @app.route('/restaurant/<int:restaurant_id>/menuitem/<int:item_id>/delete')

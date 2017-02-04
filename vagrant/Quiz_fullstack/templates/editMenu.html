@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>edit menu</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'layout.html' %}
+{% block content %}
+<div id="new_menu">
+    <span id="rest"><span>Restaurant: </span> Restaurant 01</span>
+    <h1>Editing menu item</h1>
+    <div class="border-dashed">
+        <form enctype="application/x-www-form-urlencoded" method="post" action="">
+            <span class="field"><label for="m_name">Name: </label><input type="text" name="item_name" id="m_name" placeholder="Menu Name"></span>
+            <span class="field"><label for="m_price">Price: </label><input type="text" name="item_price" id="m_price" placeholder="$ USD"></span>
+            <span class="field"><label for="m_course">Course:</label>
+                <select name="item_course" id="m_course">
+                    <option value="" selected>- Choose one -</option>
+                </select>
+            </span>
+            <span class="field">
+                <label for="m_desc">Description: </label><textarea name="item_desc" id="m_desc" placeholder="Menu item description"></textarea>
+            </span>
+            <span class="inputs"><input type="submit" value="Submit" /> <input type="button" value="Cancel"></span>
+        </form>
+    </div>
+</div>
+{% endblock %}
