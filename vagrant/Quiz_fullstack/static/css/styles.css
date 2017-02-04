@@ -59,11 +59,15 @@ footer a, footer a:active, footer a:visited{
     position: relative;
     right: 0;
 }
-.edit{
 
+.add{
+    text-decoration: none;
+    position: absolute;
+    right: 40px;
 }
-.delete{
 
+.add img{
+    width: 40px;
 }
 
 h1{
@@ -94,9 +98,10 @@ h1{
 }
 
 .border-dashed{
-    margin: 0 10% 0 10%;
+    margin: 0 18.5% 0 18.5%;
     border: dashed 6px black;
     border-radius: 45px;
+    width: 63%;
 }
 
 #rests_list tr{
@@ -108,5 +113,5 @@ h1{
 }
 
 #rests_list tr td:not(:first-child){
-    width: 5%;
+    width: 5.5%;
 }
