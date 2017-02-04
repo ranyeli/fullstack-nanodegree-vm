@@ -1,9 +1,10 @@
 from app import app
+from flask import render_template
 
 
 @app.route('/restaurant/<int:restaurant_id>/menu')
 def restaurantMenu(restaurant_id):
-    return 'Show menu for {id}'.format(id=restaurant_id)
+    return render_template('menu.html')
 
 
 @app.route('/restaurant/<int:restaurant_id>/menuitem/new')
