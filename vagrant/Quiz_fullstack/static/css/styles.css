@@ -231,3 +231,12 @@ h1{
     width: 60%;
     margin: 2px 19% 5px 19%;
 }
+
+span#rest{
+    display: block;
+    margin-left: 15px;
+}
+
+span#rest > span{
+    font-weight: bold;
+}
