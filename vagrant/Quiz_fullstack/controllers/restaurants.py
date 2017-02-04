@@ -20,4 +20,4 @@ def editRestaurant(restaurant_id):
 
 @app.route('/restaurant/<int:restaurant_id>/delete')
 def deleteRestaurant(restaurant_id):
-    return 'Deleting restaurant {id} '.format(id=restaurant_id)
+    return render_template('deleteRestaurant.html')

@@ -196,10 +196,35 @@ h1{
     border-radius: 15px;
 }
 
-/*.inputs input:first-child{*/
-    /*background-color: mediumpurple;*/
-/*}*/
+#delete_restaurant h1{
+    text-align: center;
+}
 
-/*.inputs input:not(:first-child){*/
-    /*background-color: deeppink;*/
-/*}*/
+#delete_restaurant h1:first-child{
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+#delete_restaurant h1:nth-child(2){
+    margin-top: 1px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+.question, .warning{
+    text-align: center;
+    align-content: center;
+    display: block;
+}
+
+.question{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.warning{
+    font-size: larger;
+    color: red;
+    width: 60%;
+    margin: 2px 19% 5px 19%;
+}

@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>delete restaurant</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'layout.html' %}
+{% block content %}
+<div id="delete_restaurant">
+    <h1>Restaurant to delete:</h1>
+    <h1>Restaurant 01</h1>
+    <div class="border-dashed">
+        <form enctype="application/x-www-form-urlencoded" method="post" action="">
+            <span class="question">Are you sure ?</span>
+            <span class="warning">All menus related to this restaurant will be deleted as well</span>
+            <span class="inputs"><input type="submit" value="Yes" /> <input type="button" value="No"></span>
+        </form>
+    </div>
+</div>
+{% endblock %}
