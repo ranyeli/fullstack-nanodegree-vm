@@ -155,7 +155,8 @@ h1{
     margin-bottom: 20px;
 }
 
-#edit_restaurant form{
+#edit_restaurant form,
+#new_menu form{
     width: 88%;
     margin-left: 4%;
     margin-right: 4%;
@@ -165,7 +166,8 @@ h1{
 }
 
 #edit_restaurant form span,
-#edit_restaurant form label{
+#edit_restaurant form label,
+#new_menu form label{
     font-size: x-large;
 }
 
@@ -197,7 +199,8 @@ h1{
 }
 
 #delete_restaurant h1,
-#delete_menu h1{
+#delete_menu h1,
+#new_menu h1{
     text-align: center;
 }
 
@@ -239,4 +242,43 @@ span#rest{
 
 span#rest > span{
     font-weight: bold;
+}
+
+#new_menu .field{
+    display: block;
+}
+
+#new_menu form{
+    line-height: 40px;
+}
+
+#new_menu .field *:nth-child(2){
+    font-size: larger;
+}
+
+#new_menu .field > label{
+    display: inline-block;
+    width: 150px;
+}
+
+#new_menu .field:nth-child(3) select{
+    height: 28px;
+}
+
+#new_menu .field:not(:nth-child(3)) > label{
+    width: 153.5px;
+}
+
+#new_menu .field:nth-child(3){
+    margin-bottom: 5px;
+}
+
+#new_menu .field:nth-child(4) textarea{
+    width: 59%;
+    min-height: 90px;
+}
+
+#new_menu .field:nth-child(4) label{
+    position: relative;
+    float: left;
 }

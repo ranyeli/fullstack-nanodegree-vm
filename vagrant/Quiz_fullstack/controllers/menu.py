@@ -9,7 +9,7 @@ def restaurantMenu(restaurant_id):
 
 @app.route('/restaurant/<int:restaurant_id>/menuitem/new')
 def newMenu(restaurant_id):
-    return 'new mennu for rest {id}'.format(id=restaurant_id)
+    return render_template('newMenu.html')
 
 
 @app.route('/restaurant/<int:restaurant_id>/menuitem/<int:item_id>/edit')
