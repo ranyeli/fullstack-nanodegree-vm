@@ -196,16 +196,19 @@ h1{
     border-radius: 15px;
 }
 
-#delete_restaurant h1{
+#delete_restaurant h1,
+#delete_menu h1{
     text-align: center;
 }
 
-#delete_restaurant h1:first-child{
+#delete_restaurant h1:first-child,
+#delete_menu h1:first-child{
     font-weight: bold;
     margin-bottom: 2px;
 }
 
-#delete_restaurant h1:nth-child(2){
+#delete_restaurant h1:nth-child(2),
+#delete_menu h1:nth-child(2){
     margin-top: 1px;
     font-weight: normal;
     margin-bottom: 40px;

@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>delete menu</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'layout.html' %}
+{% block content %}
+<div id="delete_menu">
+    <h1>Menu to delete:</h1>
+    <h1>Menu 01</h1>
+    <div class="border-dashed">
+        <form enctype="application/x-www-form-urlencoded" method="post" action="">
+            <span class="question">Are you sure ?</span>
+            <span class="warning">This action can not be undone</span>
+            <span class="inputs"><input type="submit" value="Yes" /> <input type="button" value="No"></span>
+        </form>
+    </div>
+</div>
+{% endblock %}
