@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>edit restaurant</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'layout.html' %}
+{% block content %}
+<div id="edit_restaurant">
+    <h1>Editing</h1>
+    <div class="border-dashed">
+        <form enctype="application/x-www-form-urlencoded" method="post" action="">
+            <label>Current Name: </label><span>Restaurant 01</span><br>
+            <label for="rest">New Name: </label><input type="text" placeholder="Restaurant" id="rest" name="rest_name"/>
+            <span class="inputs"><input type="submit" value="Submit" /> <input type="button" value="Cancel"></span>
+        </form>
+    </div>
+</div>
+{% endblock %}

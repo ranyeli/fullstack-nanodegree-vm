@@ -87,7 +87,8 @@ h1{
 
 #restaurants > h1,
 #menu > h1,
-#new_restaurant > h1{
+#new_restaurant > h1,
+#edit_restaurant > h1{
     text-align: center;
     position: relative;
     top: 15px;
@@ -154,11 +155,30 @@ h1{
     margin-bottom: 20px;
 }
 
+#edit_restaurant form{
+    width: 88%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*text-align: center;*/
+}
+
+#edit_restaurant form span,
+#edit_restaurant form label{
+    font-size: x-large;
+}
+
+#edit_restaurant form{
+    line-height: 50px;
+}
+
 #new_restaurant form label{
     font-size: xx-large;
 }
 
-#new_restaurant form #rest{
+#new_restaurant form #rest,
+#edit_restaurant form #rest{
     font-size: x-large;
     width: 245px;
 }
