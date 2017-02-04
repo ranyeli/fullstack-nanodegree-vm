@@ -1,5 +1,15 @@
 {% extends 'layout.html' %}
-
 {% block content %}
-    restaurants lalala
+<div id="restaurants">
+    <h1>Restaurants!</h1>
+    <div class="border-dashed">
+        <table id="rests_list">
+            <tr>
+                <td><a href="#">Restaurant 1</a></td>
+                <td><a href="#" class="edit"><img src="{{url_for('static', filename='images/pencil.png')}}" /> </a></td>
+                <td><a href="#" class="delete"><img src="{{url_for('static', filename='images/delete.png')}}" /></a></td>
+            </tr>
+        </table>
+    </div>
+</div>
 {% endblock %}
