@@ -7,27 +7,31 @@
     </a>
     <div class="border-dashed">
         <table id="menu_items">
+            {% for menuitem in menu %}
             <tr>
                 <td>
                     <span class="menu_item">
-                        <span class="m_label">Name: </span><span class="m_content">Menu 01</span><br>
-                        <span class="m_label">Course: </span><span class="m_content">Entree</span><br>
-                        <span class="m_label">Price: </span><span class="m_content">$599.36</span><br>
+                        <span class="m_label">Name: </span><span class="m_content">{{menuitem.name}}</span><br>
+                        <span class="m_label">Course: </span><span class="m_content">{{menuitem.course}}</span><br>
+                        <span class="m_label">Price: </span><span class="m_content">{{menuitem.price}}</span><br>
                         <span class="m_label">Description: </span><br>
-                        <span class="m_content">dfsfsdfsdf gggggggggggs sdfsdfsdf sdfsdfsdfsdfsdfsdf sdfsdfsd</span>
+                        <span class="m_content">{{menuitem.description}}</span>
                     </span>
                 </td>
                 <td>
-                    <a href="{{url_for('editMenu', restaurant_id=menu.restaurant_id, item_id=menu.id)}}" class="edit">
+                    <a href="{{url_for('editMenu', restaurant_id=menuitem.restaurant_id, item_id=menuitem.id)}}" class="edit">
                         <img src="{{url_for('static', filename='images/pencil.png')}}" />
                     </a>
                 </td>
                 <td>
-                    <a href="{{url_for('deleteMenu', restaurant_id=menu.restaurant_id, item_id=menu.id)}}" class="delete">
+                    <a href="{{url_for('deleteMenu', restaurant_id=menuitem.restaurant_id, item_id=menuitem.id)}}" class="delete">
                         <img src="{{url_for('static', filename='images/delete.png')}}" />
                     </a>
                 </td>
             </tr>
+            {% else %}
+            <tr><td style="font-size: large;">No menu items found</td></tr>
+            {% endfor %}
         </table>
     </div>
 </div>

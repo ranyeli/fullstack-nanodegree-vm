@@ -1,6 +1,5 @@
 # import sys
 # sys.path.append('../..')
-from sqlalchemy.orm.exc import NoResultFound
 from crud.restaurantcrud import *
 from models.restaurant import Restaurant
 

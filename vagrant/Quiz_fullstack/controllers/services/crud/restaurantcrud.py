@@ -7,7 +7,7 @@ def get_restaurant(restaurant_id):
     return session.query(Restaurant).filter(Restaurant.id == restaurant_id).one()
 
 def get_all_restaurants():
-    return session.query(Restaurant).order_by(Restaurant.name).all()
+    return session.query(Restaurant).order_by(Restaurant.name.asc()).all()
 
 def add_restaurant(restaurant):
     session.add(restaurant)
