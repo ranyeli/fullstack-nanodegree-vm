@@ -3,7 +3,7 @@ from models.menuitem import MenuItem
 
 
 def edit_menu_item(request, item_id):
-    menuitem = get_menuitem(item_id)
+    menuitem = get_menu_item(item_id)
     menuitem.price = request.form['item_price']
     menuitem.name = request.form['item_name']
     menuitem.course = request.form['item_course']

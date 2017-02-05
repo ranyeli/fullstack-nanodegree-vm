@@ -13,7 +13,7 @@ def delete_restaurant_menu(restaurant_id):
     session.commit()
 
 
-def get_menuitem(item_id):
+def get_menu_item(item_id):
     return session.query(MenuItem).filter(MenuItem.id == item_id).one()
 
 

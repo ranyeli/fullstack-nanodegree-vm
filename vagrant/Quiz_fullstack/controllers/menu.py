@@ -26,7 +26,16 @@ def newMenuPOST(restaurant_id):
 
 @app.route('/restaurant/<int:restaurant_id>/menuitem/<int:item_id>/edit')
 def editMenu(restaurant_id, item_id):
-    return render_template('editMenu.html')
+    courses = get_all_courses()
+    restaurant = get_restaurant(restaurant_id)
+    menuitem = get_menu_item(item_id)
+    return render_template('editMenu.html', courses=courses, restaurant=restaurant, menuitem=menuitem)
+
+
+@app.route('/restaurant/<int:restaurant_id>/menuitem/<int:item_id>/edit', methods=['POST'])
+def editMenuPOST(restaurant_id, item_id):
+    edit_menu_item(request, item_id)
+    return redirect(url_for('restaurantMenu', restaurant_id=restaurant_id))
 
 
 @app.route('/restaurant/<int:restaurant_id>/menuitem/<int:item_id>/delete')
