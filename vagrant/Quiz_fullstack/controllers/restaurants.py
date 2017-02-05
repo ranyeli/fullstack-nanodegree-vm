@@ -23,7 +23,13 @@ def newRestaurantPOST():
 
 @app.route('/restaurant/<int:restaurant_id>/edit')
 def editRestaurant(restaurant_id):
-    return render_template('editRestaurant.html')
+    restaurant = get_restaurant(restaurant_id)
+    return render_template('editRestaurant.html', restaurant=restaurant)
+
+@app.route('/restaurant/<int:restaurant_id>/edit', methods=['POST'])
+def editRestaurantPOST(restaurant_id):
+    edit_restaurant(request, restaurant_id)
+    return redirect(url_for('restaurantHome'))
 
 
 @app.route('/restaurant/<int:restaurant_id>/delete')

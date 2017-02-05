@@ -11,7 +11,7 @@
             <tr>
                 <td><a href="{{url_for('restaurantMenu', restaurant_id=restaurant.id)}}">{{restaurant.name}}</a></td>
                 <td>
-                    <a href="url_for('editRestaurant', restaurant_id=restaurant.id)" class="edit">
+                    <a href="{{url_for('editRestaurant', restaurant_id=restaurant.id)}}" class="edit">
                         <img src="{{url_for('static', filename='images/pencil.png')}}" />
                     </a>
                 </td>
