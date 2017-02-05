@@ -1,6 +1,7 @@
 from controllers.app import app
 from controllers import restaurants
 from controllers import menu
+from controllers import menuapi, restaurantsapi
 
 
 if __name__ == '__main__':
