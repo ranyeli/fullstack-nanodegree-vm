@@ -3,7 +3,9 @@ from  sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import ForeignKey, Integer, String, Date, Numeric, Column
 
+
 PuppyBase = declarative_base()
+
 
 class Shelter(PuppyBase):
     __tablename__ = 'shelter'
@@ -15,6 +17,7 @@ class Shelter(PuppyBase):
     state = Column(String(20), nullable=False)
     zipCode = Column(String(12), nullable=False)
     website = Column(String, nullable=True)
+
 
 class Puppy(PuppyBase):
     __tablename__ = 'puppy'
@@ -30,3 +33,4 @@ class Puppy(PuppyBase):
 
 engine = create_engine('sqlite:///puppies.db')
 PuppyBase.metadata.create_all(engine)
+

@@ -1,5 +1,3 @@
-# import sys
-# sys.path.append('../..')
 from crud.restaurantcrud import *
 from models.restaurant import Restaurant
 

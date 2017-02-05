@@ -3,6 +3,7 @@ from ServerFuncs import *
 from DBFuncs import *
 import re
 
+
 class WebServerHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         try:

@@ -26,5 +26,6 @@ def add_menu_item(item):
     session.add(item)
     session.commit()
 
+
 def get_all_courses():
     return session.query(Course).order_by(Course.name.asc()).all()
