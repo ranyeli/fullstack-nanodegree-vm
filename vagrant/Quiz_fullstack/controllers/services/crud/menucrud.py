@@ -3,7 +3,7 @@ from models.menuitem import MenuItem
 from models.course import Course
 
 
-def delete_menuitem(item_id):
+def delete_menu_item(item_id):
     session.query(MenuItem).filter(MenuItem.id == item_id).delete()
     session.commit()
 

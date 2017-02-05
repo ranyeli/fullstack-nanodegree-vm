@@ -1,14 +1,18 @@
 {% extends 'layout.html' %}
 {% block content %}
 <div id="delete_menu">
-    <span id="rest"><span>Restaurant: </span> Restaurant 01</span>
+    <span id="rest"><span>Restaurant: </span>{{restaurant.name}}</span>
     <h1>Menu to delete:</h1>
-    <h1>Menu 01</h1>
+    <h1>{{menuitem.name}}</h1>
     <div class="border-dashed">
-        <form enctype="application/x-www-form-urlencoded" method="post" action="">
+        <form enctype="application/x-www-form-urlencoded" method="post" action="{{url_for('deleteMenuPOST', restaurant_id=restaurant.id, item_id=menuitem.id)}}">
             <span class="question">Are you sure ?</span>
             <span class="warning">This action can not be undone</span>
-            <span class="inputs"><input type="submit" value="Yes" /> <input type="button" value="No"></span>
+            <span class="inputs"><input type="submit" value="Yes" />
+                       <a href="{{url_for('restaurantMenu', restaurant_id=restaurant.id)}}">
+                    <input type="button" value="No" />
+                </a>
+            </span>
         </form>
     </div>
 </div>

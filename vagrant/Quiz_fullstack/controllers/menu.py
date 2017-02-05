@@ -40,4 +40,13 @@ def editMenuPOST(restaurant_id, item_id):
 
 @app.route('/restaurant/<int:restaurant_id>/menuitem/<int:item_id>/delete')
 def deleteMenu(restaurant_id, item_id):
-    return render_template('deleteMenu.html')
+    restaurant = get_restaurant(restaurant_id)
+    menuitem = get_menu_item(item_id)
+    return render_template('deleteMenu.html', restaurant=restaurant, menuitem=menuitem)
+
+
+@app.route('/restaurant/<int:restaurant_id>/menuitem/<int:item_id>/delete', methods=['POST'])
+def deleteMenuPOST(restaurant_id, item_id):
+    delete_menu_item(item_id)
+    return redirect(url_for('restaurantMenu', restaurant_id=restaurant_id))
+
