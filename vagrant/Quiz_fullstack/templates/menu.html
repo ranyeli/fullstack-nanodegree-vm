@@ -1,8 +1,10 @@
 {% extends 'layout.html' %}
 {% block content %}
 <div id="menu">
-    <h1>Resturant 01</h1>
-    <a href="#" class="add"><img src="{{url_for('static', filename='images/add.png')}}"></a>
+    <h1>{{restaurant.name}}</h1>
+    <a href="{{url_for('newMenu', restaurant_id=restaurant.id)}}" class="add">
+        <img src="{{url_for('static', filename='images/add.png')}}">
+    </a>
     <div class="border-dashed">
         <table id="menu_items">
             <tr>
@@ -15,8 +17,16 @@
                         <span class="m_content">dfsfsdfsdf gggggggggggs sdfsdfsdf sdfsdfsdfsdfsdfsdf sdfsdfsd</span>
                     </span>
                 </td>
-                <td><a href="#" class="edit"><img src="{{url_for('static', filename='images/pencil.png')}}" /> </a></td>
-                <td><a href="#" class="delete"><img src="{{url_for('static', filename='images/delete.png')}}" /></a></td>
+                <td>
+                    <a href="{{url_for('editMenu', restaurant_id=menu.restaurant_id, item_id=menu.id)}}" class="edit">
+                        <img src="{{url_for('static', filename='images/pencil.png')}}" />
+                    </a>
+                </td>
+                <td>
+                    <a href="{{url_for('deleteMenu', restaurant_id=menu.restaurant_id, item_id=menu.id)}}" class="delete">
+                        <img src="{{url_for('static', filename='images/delete.png')}}" />
+                    </a>
+                </td>
             </tr>
         </table>
     </div>
