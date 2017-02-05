@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template, redirect, request, url_for
+from flask import render_template, redirect, request, url_for, flash
 from services.menuservice import *
 from services.restaurantservice import get_restaurant
 
@@ -21,6 +21,7 @@ def newMenu(restaurant_id):
 @app.route('/restaurant/<int:restaurant_id>/menuitem/new', methods=['POST'])
 def newMenuPOST(restaurant_id):
     save_menu_item(request, restaurant_id)
+    flash('new menu item was added')
     return redirect(url_for('restaurantMenu', restaurant_id=restaurant_id))
 
 
@@ -35,6 +36,7 @@ def editMenu(restaurant_id, item_id):
 @app.route('/restaurant/<int:restaurant_id>/menuitem/<int:item_id>/edit', methods=['POST'])
 def editMenuPOST(restaurant_id, item_id):
     edit_menu_item(request, item_id)
+    flash('menu item successfully edited')
     return redirect(url_for('restaurantMenu', restaurant_id=restaurant_id))
 
 
@@ -48,5 +50,6 @@ def deleteMenu(restaurant_id, item_id):
 @app.route('/restaurant/<int:restaurant_id>/menuitem/<int:item_id>/delete', methods=['POST'])
 def deleteMenuPOST(restaurant_id, item_id):
     delete_menu_item(item_id)
+    flash('menu item successfully deleted')
     return redirect(url_for('restaurantMenu', restaurant_id=restaurant_id))
 

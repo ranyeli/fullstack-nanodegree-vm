@@ -2,6 +2,15 @@
 {% block content %}
 <div id="menu">
     <h1>{{restaurant.name}}</h1>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for msg in messages %}
+            <li><strong><em>{{msg}}</em></strong></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
     <a href="{{url_for('newMenu', restaurant_id=restaurant.id)}}" class="add">
         <img src="{{url_for('static', filename='images/add.png')}}">
     </a>

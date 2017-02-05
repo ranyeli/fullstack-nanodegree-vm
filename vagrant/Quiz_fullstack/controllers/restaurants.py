@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template, redirect, url_for, request
+from flask import render_template, redirect, url_for, request, flash
 from datetime import datetime
 from services.restaurantservice import *
 
@@ -19,6 +19,7 @@ def newRestaurant():
 @app.route('/restaurants/new', methods=['POST'])
 def newRestaurantPOST():
     save_restaurant(request)
+    flash('new restaurant was created')
     return redirect(url_for('restaurantHome'))
 
 
@@ -31,6 +32,7 @@ def editRestaurant(restaurant_id):
 @app.route('/restaurant/<int:restaurant_id>/edit', methods=['POST'])
 def editRestaurantPOST(restaurant_id):
     edit_restaurant(request, restaurant_id)
+    flash('restaurant successfully edited')
     return redirect(url_for('restaurantHome'))
 
 
@@ -43,4 +45,5 @@ def deleteRestaurant(restaurant_id):
 @app.route('/restaurant/<int:restaurant_id>/delete', methods=['POST'])
 def deleteRestaurantPOST(restaurant_id):
     delete_restaurant(restaurant_id)
+    flash('restaurant successfully deleted')
     return redirect(url_for('restaurantHome'))
