@@ -1,21 +1,30 @@
 {% extends 'layout.html' %}
 {% block content %}
 <div id="new_menu">
-    <span id="rest"><span>Restaurant: </span> Restaurant 01</span>
+    <span id="rest"><span>Restaurant: </span> {{restaurant.name}} </span>
     <h1>Add a new menu item!</h1>
     <div class="border-dashed">
-        <form enctype="application/x-www-form-urlencoded" method="post" action="">
+        <form id="f_menu" enctype="application/x-www-form-urlencoded" method="post" action="{{url_for('newMenuPOST', restaurant_id=restaurant.id)}}">
             <span class="field"><label for="m_name">Name: </label><input type="text" name="item_name" id="m_name" placeholder="Menu Name"></span>
             <span class="field"><label for="m_price">Price: </label><input type="text" name="item_price" id="m_price" placeholder="$ USD"></span>
             <span class="field"><label for="m_course">Course:</label>
                 <select name="item_course" id="m_course">
-                    <option value="" selected>- Choose one -</option>
+                    <option value="None" selected>- Choose one -</option>
+                    {% for course in courses %}
+                    <option value="{{course.name}}">{{course.name}}</option>
+                    {% endfor %}
                 </select>
             </span>
             <span class="field">
-                <label for="m_desc">Description: </label><textarea name="item_desc" id="m_desc" placeholder="Menu item description"></textarea>
+                <label for="m_desc">Description: </label>
+                <textarea name="item_desc" id="m_desc" placeholder="Menu item description" form="f_menu">
+                </textarea>
             </span>
-            <span class="inputs"><input type="submit" value="Submit" /> <input type="button" value="Cancel"></span>
+            <span class="inputs"><input type="submit" value="Submit" />
+                 <a href="{{url_for('restaurantMenu', restaurant_id=restaurant.id)}}">
+                    <input type="button" value="Cancel" />
+                </a>
+            </span>
         </form>
     </div>
 </div>

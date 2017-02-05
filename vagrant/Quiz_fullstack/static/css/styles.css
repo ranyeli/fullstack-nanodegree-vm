@@ -252,7 +252,7 @@ span#rest > span{
     line-height: 40px;
 }
 
-#new_menu .field *:nth-child(2){
+#new_menu .field *:nth-child(2):not(option){
     font-size: larger;
 }
 

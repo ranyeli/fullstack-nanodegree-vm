@@ -15,7 +15,11 @@
             <span class="field">
                 <label for="m_desc">Description: </label><textarea name="item_desc" id="m_desc" placeholder="Menu item description"></textarea>
             </span>
-            <span class="inputs"><input type="submit" value="Submit" /> <input type="button" value="Cancel"></span>
+            <span class="inputs"><input type="submit" value="Submit" />
+                <a href="{{url_for('restaurantMenu', restaurant_id=restaurant.id)}}">
+                    <input type="button" value="Cancel" />
+                </a>
+            </span>
         </form>
     </div>
 </div>

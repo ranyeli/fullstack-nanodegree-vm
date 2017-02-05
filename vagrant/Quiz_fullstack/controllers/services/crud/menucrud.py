@@ -1,5 +1,6 @@
 from session import session
 from models.menuitem import MenuItem
+from models.course import Course
 
 
 def delete_menuitem(item_id):
@@ -21,7 +22,9 @@ def get_restaurant_menu(restaurant_id):
         .filter(MenuItem.restaurant_id == restaurant_id).all()
 
 
-def add_menuitem(item):
+def add_menu_item(item):
     session.add(item)
     session.commit()
 
+def get_all_courses():
+    return session.query(Course).order_by(Course.name.asc()).all()
