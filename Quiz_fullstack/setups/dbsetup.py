@@ -7,5 +7,5 @@ import models.restaurant
 import models.course
 
 
-engine = create_engine('sqlite:///../dbs/restaurantmenu.db')
+engine = create_engine('postgresql://postgres@localhost:5432/restaurantmenu')
 Base.metadata.create_all(engine)
