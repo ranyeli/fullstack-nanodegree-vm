@@ -1,0 +1,8 @@
+{
+  "name": "Start on Heroku: Python",
+  "description": "Restaurant Python app",
+  "image": "heroku/python",
+  "repository": "https://github.com/heroku/python-getting-started",
+  "keywords": ["python", "django" ],
+  "addons": [ "heroku-postgresql" ]
+}
