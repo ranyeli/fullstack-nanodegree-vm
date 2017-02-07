@@ -1,1 +1,1 @@
-web: python finalproject.py
+web: waitress-serve --port=$PORT waitressserver.py:app
